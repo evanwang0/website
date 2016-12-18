@@ -1,0 +1,12 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanwang0/website.git"
+  },
+  "author": "Evan Wang",
+  "license": "ISC"
+}
