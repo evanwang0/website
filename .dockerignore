@@ -40,5 +40,5 @@ jspm_packages
 .git
 .gitignore
 
-# Deploy script
-deploy.sh
+# Scripts
+scripts

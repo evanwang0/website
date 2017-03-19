@@ -5,3 +5,5 @@ WORKDIR /var/www/evanwang0
 COPY . .
 
 RUN yarn
+
+CMD npm start
