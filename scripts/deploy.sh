@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -e -x
 
 docker build -t website:latest .
 docker save website:latest | bzip2 | pv | \
