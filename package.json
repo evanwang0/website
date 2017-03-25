@@ -11,7 +11,7 @@
     "url": "git+https://github.com/evanwang0/website.git"
   },
   "author": "Evan Wang",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.14.0"
   }
