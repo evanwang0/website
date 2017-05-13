@@ -1,0 +1,27 @@
+version: "3.1"
+
+services:
+  reverse-proxy:
+    build: reverse-proxy
+    ports:
+     - "80:80"
+     - "443:443"
+    secrets:
+     - ssl-root-cert
+     - ssl-root-key
+     - ssl-www-cert
+     - ssl-www-key
+  www:
+    build: www
+    ports:
+     - "8080:8080"
+
+secrets:
+  ssl-root-cert:
+    file: ${PWD}/reverse-proxy/config/ssl/root/cert.pem
+  ssl-root-key:
+    file: ${PWD}/reverse-proxy/config/ssl/root/key.pem
+  ssl-www-cert:
+    file: ${PWD}/reverse-proxy/config/ssl/www/cert.pem
+  ssl-www-key:
+    file: ${PWD}/reverse-proxy/config/ssl/www/key.pem
