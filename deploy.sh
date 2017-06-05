@@ -19,7 +19,7 @@ tar -czh -C $2 . | ssh $origin "tar -C $app_dir -zxf -"
 
 ssh $origin -T /bin/bash <<EOF
     cd $app_dir
-    docker-compose build
+    docker-compose build --pull
     docker-compose down
     docker-compose up -d
 EOF
