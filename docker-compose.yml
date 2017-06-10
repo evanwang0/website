@@ -11,8 +11,15 @@ services:
      - ssl-root-key
      - ssl-www-cert
      - ssl-www-key
+     - ssl-calendar-cert
+     - ssl-calendar-key
   www:
     build: www
+  calendar:
+    build: calendar
+    volumes:
+     - ./calendar/radicale/etc:/etc/radicale:ro
+     - ./calendar/radicale/lib:/var/lib/radicale
 
 secrets:
   ssl-root-cert:
@@ -23,3 +30,7 @@ secrets:
     file: reverse-proxy/ssl/www/cert.pem
   ssl-www-key:
     file: reverse-proxy/ssl/www/key.pem
+  ssl-calendar-cert:
+    file: reverse-proxy/ssl/calendar/cert.pem
+  ssl-calendar-key:
+    file: reverse-proxy/ssl/calendar/key.pem
