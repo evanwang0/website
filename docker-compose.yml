@@ -18,10 +18,10 @@ services:
 
 secrets:
   ssl-root-cert:
-    file: reverse-proxy/config/ssl/root/cert.pem
+    file: reverse-proxy/ssl/root/cert.pem
   ssl-root-key:
-    file: reverse-proxy/config/ssl/root/key.pem
+    file: reverse-proxy/ssl/root/key.pem
   ssl-www-cert:
-    file: reverse-proxy/config/ssl/www/cert.pem
+    file: reverse-proxy/ssl/www/cert.pem
   ssl-www-key:
-    file: reverse-proxy/config/ssl/www/key.pem
+    file: reverse-proxy/ssl/www/key.pem
