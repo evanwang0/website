@@ -13,8 +13,6 @@ services:
      - ssl-www-key
   www:
     build: www
-    ports:
-     - "8080:8080"
 
 secrets:
   ssl-root-cert:
