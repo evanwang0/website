@@ -19,7 +19,7 @@ services:
     build: calendar
     volumes:
      - ./calendar/radicale/etc:/etc/radicale:ro
-     - ./calendar/radicale/lib:/var/lib/radicale
+     - ${CALENDAR_VOLUME}:/var/lib/radicale
 
 secrets:
   ssl-root-cert:
