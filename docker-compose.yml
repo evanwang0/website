@@ -9,10 +9,13 @@ services:
     secrets:
      - ssl-root-cert
      - ssl-root-key
+     - ssl-root-chain
      - ssl-www-cert
      - ssl-www-key
+     - ssl-www-chain
      - ssl-calendar-cert
      - ssl-calendar-key
+     - ssl-calendar-chain
   www:
     build: www
   calendar:
@@ -26,11 +29,17 @@ secrets:
     file: reverse-proxy/ssl/root/cert.pem
   ssl-root-key:
     file: reverse-proxy/ssl/root/key.pem
+  ssl-root-chain:
+    file: reverse-proxy/ssl/root/chain.pem
   ssl-www-cert:
     file: reverse-proxy/ssl/www/cert.pem
   ssl-www-key:
     file: reverse-proxy/ssl/www/key.pem
+  ssl-www-chain:
+    file: reverse-proxy/ssl/www/chain.pem
   ssl-calendar-cert:
     file: reverse-proxy/ssl/calendar/cert.pem
   ssl-calendar-key:
     file: reverse-proxy/ssl/calendar/key.pem
+  ssl-calendar-chain:
+    file: reverse-proxy/ssl/calendar/chain.pem
