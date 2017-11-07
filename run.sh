@@ -12,8 +12,6 @@ cat <<EOF >> /etc/hosts
 ::1        evanwang0.com
 127.0.0.1  www.evanwang0.com
 ::1        www.evanwang0.com
-127.0.0.1  calendar.evanwang0.com
-::1        calendar.evanwang0.com
 EOF
 
 docker-compose build --pull
