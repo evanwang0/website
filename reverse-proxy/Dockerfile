@@ -1,9 +1,3 @@
-FROM nginx:stable-alpine
+FROM lkwg82/h2o-http2-server:latest
 
-RUN rm -rf /etc/nginx/*
-COPY nginx /etc/nginx
-
-RUN mkdir /etc/nginx/sites-enabled
-
-RUN ln -s /etc/nginx/sites-available/www.conf \
-          /etc/nginx/sites-enabled/www.conf
+COPY h2o/h2o.conf /etc/h2o/h2o.conf
