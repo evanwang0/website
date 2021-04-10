@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Evan's Website</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="a personal website" />
+    <style>
+      * {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: auto;
+      }
+
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+
+      article, aside, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      blockquote, q {
+        quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      @font-face {
+        font-family: 'EB Garamond';
+        src: local('EB Garamond'),
+            url('./fonts/EB-Garamond.woff2') format('woff2'),
+            url('./fonts/EB-Garamond.woff') format('woff'),
+            url('./fonts/EB-Garamond.ttf') format('ttf'),
+            url('./fonts/EB-Garamond.eot') format('eot');
+      }
+
+      @font-face {
+        font-family: 'EB Garamond';
+        src: local('EB Garamond Italic'),
+            url('./fonts/EB-Garamond-Italic.woff2') format('woff2'),
+            url('./fonts/EB-Garamond-Italic.woff') format('woff'),
+            url('./fonts/EB-Garamond-Italic.ttf') format('ttf'),
+            url('./fonts/EB-Garamond-Italic.eot') format('eot');
+        font-style: italic;
+      }
+
+      body {
+        font-family: 'EB Garamond', serif;
+        font-size: 18px;
+        line-height: 1.3;
+        background-color: #FFFFFF;
+        color: #000000;
+      }
+
+      a {
+        text-decoration: none;
+        color: #0645ad;
+      }
+
+      a:visited {
+        color: #0b0080;
+      }
+
+      h1 {
+        font-weight: normal;
+        font-size: 22px;
+      }
+
+      p, ul {
+        margin: 0.5em 0;
+      }
+
+      i {
+        font-style: italic;
+      }
+
+      section + section {
+        margin-top: 20px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 8vw auto 0;
+        max-width: calc((288px + 96px) * 2.5)
+      }
+
+      .container > header,
+      .container > main {
+        max-width: 288px;  
+      }
+
+      .seal {
+        display: block;
+        outline: none;
+        width: 50px;
+        height: 50px;
+        background: url('images/seal.svg');
+        font-size: 0;
+        line-height: 0; 
+        color: transparent; 
+      }
+
+      .poem {
+        margin-top: 20px;
+        width: 288px; 
+      }
+
+      .degree {
+        font-size: 16px;
+      }
+
+      .social {
+        margin: 40px auto;
+        text-align: center;
+      }
+
+      .social ul {
+        display: block;
+      } 
+
+      .social ul li {
+        display: inline;
+      } 
+
+      .social li + li::before {
+        content: ' | ';
+      } 
+
+
+      @media screen and (max-width: 672px) {
+        .container {
+          display: block;
+          margin: 11vh;
+        }
+
+        .container > header,
+        .container > main {
+          max-width: initial;  
+        }
+
+        .container > header + main::before {
+          content: '';
+          display: block;
+          margin: 48px 0;
+          border-top: solid #808080 1px;
+          width: 96px;
+        }
+      }
+
+      @media screen and (max-width: 450px) {
+        .container {
+          display: block;
+          margin: 20px;
+        }
+
+        .container > header,
+        .container > main {
+          max-width: initial;  
+        }
+
+        .container > header + main::before {
+          content: '';
+          display: block;
+          margin: 40px auto;
+          border-top: solid #808080 1px;
+          width: 96px;
+        }
+
+        .seal {
+          margin: 32px auto;
+        }
+
+        .poem {
+          margin: 32px auto 48px;
+          max-width: 288px; 
+          width: auto;
+        }
+      }
+
+      @media screen and (prefers-color-scheme: dark) {
+        body {
+          background-color: #000000;
+          color: #ffffff;
+        }
+
+        .seal {
+          filter: invert(1);
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a class="seal" href="/">Homepage</a>
+        <section class="poem">
+          <p>
+            Welcome to my site<br />
+            I tried to make it right<br />
+            for all the world 🌎 to see<br />
+            all that I could be
+          </p>
+          <p>
+            Please don't click 🖱️ away<br />
+            or swipe right on display 📱<br />
+            Here — have a cookie 🍪<br />
+            so Mark can have a looky 👀<br />
+          </p>
+          <p>
+            Just kidding 😂, I wouldn't sell you out<br />
+            Well, maybe for some clout<br />
+          </p>
+        </section>
+      </header>
+      <main>
+        <section class="summary">
+          <section>
+            <h1>About</h1>
+            <p>
+              Hi, my name is Evan.<br />
+              I'm a self-taught programmer who grew up with the internet.<br />
+              I've got a greyhound named Kali.<br />
+              I am an American.
+            </p>
+          </section>
+          <section>
+            <h1>Projects</h1>
+            <ul>
+              <li>Concise - an expressive modern text editor</li>
+            </ul>
+          </section>
+          <section>
+            <h1>Work</h1>
+            <ul>
+              <li>Former Technical Lead at Bloomberg LP</li>
+            </ul>
+          </section>
+          <section>
+            <h1>Education</h1>
+            <ul>
+              <li>
+                University of Maryland, College Park<br />
+                <i class="degree">B.S. in Computer Science</i>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="social">
+          <ul>
+            <li><a href="mailto:email@evanwang0.com">email</a></li>
+            <li><a href="https://twitter.com/evanwang0">twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/evan-wang-0369b619a/">linkedin</a></li>
+            <li><a href="https://github.com/evanwang0">github</a></li>
+          </ul>
+      </section>
+      </main>
+    </div>
+  </body>
+</html>
