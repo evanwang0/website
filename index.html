@@ -111,12 +111,16 @@
         flex-direction: row;
         justify-content: space-evenly;
         margin: 8vw auto 0;
-        max-width: calc((288px + 96px) * 2.5)
+        max-width: calc((288px + 96px) * 2.5 + (350px + 96px) * 1.25);
       }
 
       .container > header,
       .container > main {
         max-width: 288px;  
+      }
+
+      .container > .blog {
+        max-width: 350px;
       }
 
       .seal {
@@ -156,6 +160,25 @@
         content: ' | ';
       } 
 
+      .under-construction {
+        color: #808080;
+      }
+
+      @media screen and (max-width: 1100px) {
+        .container {
+          flex-wrap: wrap;
+          max-width: calc((288px + 96px) * 2.5);
+        }
+
+        .container > header,
+        .container > main {
+          max-width: 288px;
+        }
+
+        .container > .blog {
+          max-width: initial;
+        }
+      }
 
       @media screen and (max-width: 672px) {
         .container {
@@ -164,11 +187,12 @@
         }
 
         .container > header,
-        .container > main {
+        .container > main,
+        .container > .blog {
           max-width: initial;  
         }
 
-        .container > header + main::before {
+        .container > * + *::before {
           content: '';
           display: block;
           margin: 48px 0;
@@ -184,11 +208,12 @@
         }
 
         .container > header,
-        .container > main {
+        .container > main,
+        .container > .blog {
           max-width: initial;  
         }
 
-        .container > header + main::before {
+        .container > * + *::before {
           content: '';
           display: block;
           margin: 40px auto;
@@ -225,7 +250,6 @@
           color: #5f38fd;
         }
       }
-
     </style>
   </head>
   <body>
@@ -291,8 +315,15 @@
             <li><a href="https://www.linkedin.com/in/evan-wang-0369b619a/">linkedin</a></li>
             <li><a href="https://github.com/evanwang0">github</a></li>
           </ul>
-      </section>
+        </section>
       </main>
+      <section class="blog">
+        <h1>Blog</h1>
+        <p>A collection of thought experiments and ramblings with a focus on tech and computing</p>
+        <ul>
+          <li class="under-construction">Coming soon...</li>
+        </ul>
+      </section>
     </div>
   </body>
 </html>
