@@ -3,7 +3,6 @@
   <head>
     <title>Evan's Website</title>
     <meta charset="utf-8" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="a personal website" />
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -91,7 +90,7 @@
         color: #0b0080;
       }
 
-      h1 {
+      h2 {
         font-weight: normal;
         font-size: 22px;
       }
@@ -116,7 +115,7 @@
         max-width: calc((288px + 96px) * 2.5 + (350px + 96px) * 1.25);
       }
 
-      .container > header,
+      .container > .introduction,
       .container > main {
         max-width: 288px;  
       }
@@ -172,7 +171,7 @@
           max-width: calc((288px + 96px) * 2.5);
         }
 
-        .container > header,
+        .container > .introduction,
         .container > main {
           max-width: 288px;
         }
@@ -188,7 +187,7 @@
           margin: 11vh;
         }
 
-        .container > header,
+        .container > .introduction,
         .container > main,
         .container > .blog {
           max-width: initial;  
@@ -209,7 +208,7 @@
           margin: 20px;
         }
 
-        .container > header,
+        .container > .introduction,
         .container > main,
         .container > .blog {
           max-width: initial;  
@@ -253,12 +252,13 @@
         }
       }
     </style>
+    <script defer data-domain="evanwang0.com" src="https://analytics.evanwang0.com/js/script.js"></script>
   </head>
   <body>
     <div class="container">
-      <header>
+      <section class="introduction">
         <a class="seal" href="/">Homepage</a>
-        <section class="poem">
+        <article class="poem">
           <p>
             Welcome to my site<br />
             I tried to make it right<br />
@@ -275,12 +275,12 @@
             Just kidding 😂, I wouldn't sell you out<br />
             Well, maybe for some clout<br />
           </p>
-        </section>
-      </header>
+        </article>
+      </section>
       <main>
-        <section class="summary">
+        <div class="summary">
           <section>
-            <h1>About</h1>
+            <h2>About</h2>
             <p>
               Hi, my name is Evan.<br />
               I'm a self-taught programmer who grew up with the internet.<br />
@@ -289,20 +289,20 @@
             </p>
           </section>
           <section>
-            <h1>Work</h1>
+            <h2>Work</h2>
             <ul>
-              <li>Co-founder & Former CTO at <a href="https://www.buildwithtoki.com/">TOKI</a></li>
+              <li>Co-founder &amp; Former CTO at <a href="https://www.buildwithtoki.com/">TOKI</a></li>
               <li>Former Technical Lead at Bloomberg LP</li>
             </ul>
           </section>
           <section>
-            <h1>Projects</h1>
+            <h2>Projects</h2>
             <ul>
               <li>Concise - an expressive modern text editor</li>
             </ul>
           </section>
           <section>
-            <h1>Education</h1>
+            <h2>Education</h2>
             <ul>
               <li>
                 University of Maryland, College Park<br />
@@ -310,18 +310,18 @@
               </li>
             </ul>
           </section>
-        </section>
-        <section class="social">
+        </div>
+        <nav class="social">
           <ul>
             <li><a href="mailto:email@evanwang0.com">email</a></li>
             <li><a rel="me" href="https://mastodon.social/@evanwang0">mastodon</a></li>
-            <li><a href="https://www.linkedin.com/in/evan-wang-0369b619a/">linkedin</a></li>
+            <li><a href="https://www.linkedin.com/in/evanwang0/">linkedin</a></li>
             <li><a href="https://github.com/evanwang0">github</a></li>
           </ul>
-        </section>
+        </nav>
       </main>
       <section class="blog">
-        <h1>Blog</h1>
+        <h2>Blog</h2>
         <p>A collection of thought experiments and ramblings with a focus on tech and computing</p>
         <ul>
           <li class="under-construction">I swear I'm going to write something soon...</li>
